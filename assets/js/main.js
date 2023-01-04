@@ -100,6 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const glightbox = GLightbox({
     selector: '.glightbox'
   });
+  
 
   /**
    * Init swiper slider with 1 slide at once in desktop view
@@ -154,6 +155,37 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   });
+  /**
+   * Init swiper slider with 4 slides at once in desktop view
+   */
+  new Swiper('.slides-4', {
+    speed: 300,
+    loop: true,
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false
+    },
+    slidesPerView: 'auto',
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 5
+      },
+
+      1200: {
+        slidesPerView: 5,
+      }
+    }
+  });
 
   /**
    * Animation on scroll function and init
@@ -171,3 +203,4 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+

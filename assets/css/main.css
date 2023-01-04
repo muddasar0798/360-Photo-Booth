@@ -738,10 +738,80 @@ h6 {
 }
 
 /*--------------------------------------------------------------
+# Companies Section
+--------------------------------------------------------------*/
+.companies {
+  margin-top: 80px;
+}
+
+.companies .company-item {
+  box-sizing: content-box;
+  padding: 10px;
+  margin: 20px 10px;
+  background: var(--color-secondary);
+  min-height: 100px;
+  max-width: 100px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  transition: 0.1s;
+}
+
+
+.companies .company-item .company-img {
+  width: 10px;
+  border-radius: 50%;
+  border: 5px solid #474a4d;
+  margin: 0 auto;
+}
+
+.companies .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+.companies .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0.2);
+  opacity: 1;
+}
+
+.companies .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.companies .swiper-slide {
+  opacity: 0.3;
+}
+
+@media (max-width: 1199px) {
+  .companies .swiper-slide-active {
+    opacity: 1;
+  }
+
+  .companies .swiper-pagination {
+    margin-top: 0;
+  }
+
+  .companies .company-item {
+    margin: 40px 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .companies .swiper-slide-next {
+    opacity: 1;
+    transform: scale(1.12);
+  }
+}
+
+
+/*--------------------------------------------------------------
 # Pricing Section
 --------------------------------------------------------------*/
 .gallery {
-  margin-top: 40px;
+  margin-top: 10px;
 }
 
 .gallery .gallery-item {
@@ -1258,7 +1328,7 @@ h6 {
   font-size: 18px;
 }
 
-.hero .btn-get-started {
+.hero .btn-get-started, #modal .submit {
   font-family: var(--font-primary);
   font-weight: 400;
   font-size: 14px;
@@ -1272,7 +1342,7 @@ h6 {
   background: var(--color-primary);
 }
 
-.hero .btn-get-started:hover {
+.hero .btn-get-started:hover, #modal .submit:hover {
   background: #0ff1e4;
 }
 

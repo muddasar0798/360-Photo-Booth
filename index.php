@@ -1,3 +1,23 @@
+<?php
+if(isset($_POST['submit'])){
+  $to = "md.quadri1801@gmail.com"; // this is your Email address
+  $from = $_POST['email']; // this is the sender's Email address
+  $first_name = $_POST['first_name'];
+  $last_name = $_POST['last_name'];
+  $subject = "Form submission";
+  $subject2 = "Copy of your form submission";
+  $message = $first_name . " " . $last_name . " wrote the following:" . "\n\n" . $_POST['message'];
+  $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
+
+  $headers = "From:" . $from;
+  $headers2 = "From:" . $to;
+  mail($to,$subject,$message,$headers);
+  mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
+  echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
+  // You can also use header('Location: thank_you.php'); to redirect to another page.
+  }
+        ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,6 +47,9 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+
+
 
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
@@ -65,6 +88,7 @@
   </section><!-- End Hero Section -->
   <!-- Button trigger modal -->
 
+  <section id="modal">
   <!-- Modal -->
   <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -75,34 +99,62 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+
+        <form action="" method="post">
+First Name: <input type="text" name="first_name"><br>
+Last Name: <input type="text" name="last_name"><br>
+Email: <input type="text" name="email"><br>
+Message:<br><textarea rows="5" name="message" cols="30"></textarea><br>
+<input type="submit" name="submit" value="Submit">
+</form>
+
+        <!-- <form method="post" name="myemailform" action="forms/contact.php">
+
+          Enter Name:	<input type="text" name="name">
+
+          Enter Email Address:	<input type="email" name="email"> -->
+
+          <!-- Enter Message:	<textarea name="message"></textarea> -->
+
+          <!-- <input type="submit" value="Send Form">
+          </form> -->
+
+          <!-- <form action="forms/contact.php" method="post" role="form" class="php-email-form">
             <div class="form-group mt-3">
               <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
             </div>
             <div class="form-group mt-3">
               <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-            </div>
+            </div> -->
+            <!-- 
             <div class="form-group mt-3">
               <input type="text" class="form-control" name="phone" id="phone" placeholder="Phone" required>
             </div>
             <div class="form-group mt-3">
-              <input type="text" class="form-control" name="Venue" id="Venue" placeholder="Venue" required>
+              <input type="text" class="form-control" name="venue" id="venue" placeholder="Venue" required>
+            </div>
+            <div class="form-group mt-3">
+              <input type="date" class="form-control" name="date" id="date" placeholder="Date" required>
             </div>
             <div class="form-group mt-3">
               <input type="text" class="form-control" name="toi" id="toi" placeholder="Event Type" required>
             </div>
             <div class="form-group mt-3">
               <input type="text" class="form-control" name="hrs" id="hrs" placeholder="Hours" required>
-            </div>
-          </form>
+            </div> -->
+          <!-- </form> -->
+
+          
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">submit</button>
+          <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+          <input type="submit" value="Send Form">
+          <!-- <button type="submit" class="btn submit">submit</button> -->
         </div>
       </div>
     </div>
   </div>
+  </section><!-- End Modal Section -->
   <main id="main" data-aos="fade" data-aos-delay="1500">
   <style>
     .video_div {
@@ -110,8 +162,8 @@
       padding-top: 40%;
     }
 
-    /* video {
-      position: relative;
+    video {
+      position: absolute;
       top: 0;
       bottom: 0;
       left: 0;
@@ -119,28 +171,83 @@
       height: 100%;
       border: 0;
 
-    } */
+    }
   </style>
     <!-- ======= Gallery Section ======= -->
 
     <section id="gallery" class="gallery">
       <div class="container">
-        <div class="video_div">
+        <!-- <div class="video_div"> -->
           <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
-              <div class="carousel-item active">
+              <div class="carousel-item active video_div">
               <video autoplay loop muted>
                     <source src="assets/vid/1.mp4" type="video/mp4">
                   </video>
               </div>
-              <div class="carousel-item">
+              <div class="carousel-item video_div">
               <video autoplay loop muted>
                     <source src="assets/vid/2.mp4" type="video/mp4">
                   </video>
               </div>
-              <div class="carousel-item">
+              <div class="carousel-item video_div">
               <video autoplay loop muted>
                     <source src="assets/vid/3.mp4" type="video/mp4">
+                  </video>
+              </div>
+              <div class="carousel-item video_div">
+              <video autoplay loop muted>
+                    <source src="assets/vid/4.mp4" type="video/mp4">
+                  </video>
+              </div>
+              <div class="carousel-item video_div">
+              <video autoplay loop muted>
+                    <source src="assets/vid/5.mp4" type="video/mp4">
+                  </video>
+              </div>
+              <div class="carousel-item video_div">
+              <video autoplay loop muted>
+                    <source src="assets/vid/6.mp4" type="video/mp4">
+                  </video>
+              </div>
+              <div class="carousel-item video_div">
+              <video autoplay loop muted>
+                    <source src="assets/vid/7.mp4" type="video/mp4">
+                  </video>
+              </div>
+              <div class="carousel-item video_div">
+              <video autoplay loop muted>
+                    <source src="assets/vid/8.mp4" type="video/mp4">
+                  </video>
+              </div>
+              <div class="carousel-item video_div">
+              <video autoplay loop muted>
+                    <source src="assets/vid/9.mp4" type="video/mp4">
+                  </video>
+              </div>
+              <div class="carousel-item video_div">
+              <video autoplay loop muted>
+                    <source src="assets/vid/10.mp4" type="video/mp4">
+                  </video>
+              </div>
+              <div class="carousel-item video_div">
+              <video autoplay loop muted>
+                    <source src="assets/vid/11.mp4" type="video/mp4">
+                  </video>
+              </div>
+              <div class="carousel-item video_div">
+              <video autoplay loop muted>
+                    <source src="assets/vid/12.mp4" type="video/mp4">
+                  </video>
+              </div>
+              <div class="carousel-item video_div">
+              <video autoplay loop muted>
+                    <source src="assets/vid/13.mp4" type="video/mp4">
+                  </video>
+              </div>
+              <div class="carousel-item video_div">
+              <video autoplay loop muted>
+                    <source src="assets/vid/14.mp4" type="video/mp4">
                   </video>
               </div>
             </div>
@@ -153,7 +260,49 @@
                 <span class="visually-hidden">Next</span>
               </button>
           </div>
-        </div>
+        <!-- </div> -->
+      </div>
+
+      <div class="container">
+
+        <div class="mt-5 row gy-4 justify-content-center">
+          <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="gallery-item h-100">
+              <img src="assets/img/gallery/gallery-1.jpg" class="img-fluid" alt="">
+              <div class="gallery-links d-flex align-items-center justify-content-center">
+                <a href="assets/img/gallery/gallery-1.jpg" title="Gallery 1" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+                <!-- <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
+              </div>
+            </div>
+          </div><!-- End Gallery Item -->
+          <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="gallery-item h-100">
+              <img src="assets/img/gallery/gallery-2.jpg" class="img-fluid" alt="">
+              <div class="gallery-links d-flex align-items-center justify-content-center">
+                <a href="assets/img/gallery/gallery-2.jpg" title="Gallery 2" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+                <!-- <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
+              </div>
+            </div>
+          </div><!-- End Gallery Item -->
+          <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="gallery-item h-100">
+              <img src="assets/img/gallery/gallery-3.jpg" class="img-fluid" alt="">
+              <div class="gallery-links d-flex align-items-center justify-content-center">
+                <a href="assets/img/gallery/gallery-3.jpg" title="Gallery 3" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+                <!-- <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
+              </div>
+            </div>
+          </div><!-- End Gallery Item -->
+          <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="gallery-item h-100">
+              <img src="assets/img/gallery/gallery-4.jpg" class="img-fluid" alt="">
+              <div class="gallery-links d-flex align-items-center justify-content-center">
+                <a href="assets/img/gallery/gallery-4.jpg" title="Gallery 4" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+                <!-- <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
+              </div>
+            </div>
+          </div><!-- End Gallery Item -->
+
       </div>
 
    
@@ -168,6 +317,7 @@
         <div class="section-header">
           <h2>Testimonials</h2>
           <p>Google Reviews</p>
+          <!-- <p>What they are saying</p> -->
         </div>
 
         <div class="slides-3 swiper">
@@ -179,12 +329,14 @@
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
                 <p>
-                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                  My friends and family had such a great time using the 360 Photo Booth! We made so many cute and funny memories. 
+                  Their set up was super smooth. It was easy to communicate with them too. Would definitely hire 360 Photo Booth for future events 
+                  and will recommend them to all family and friends!               
                 </p>
                 <div class="profile mt-auto">
-                  <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                  <h3>Saul Goodman</h3>
-                  <h4>Ceo &amp; Founder</h4>
+                  <img src="assets/img/testimonials/1.png" class="testimonial-img" alt="">
+                  <h3>Pavnit Dhaliwal</h3>
+                  <!-- <h4>Ceo &amp; Founder</h4> -->
                 </div>
               </div>
             </div><!-- End testimonial item -->
@@ -195,12 +347,15 @@
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
                 <p>
-                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                  Sonia and her team were amazing!! We booked a 360 video booth for our client's event and it was perfect. 
+                  You have to give these guys a try!! Booking and logistics were easy with the online booking system and they were total pros!!!”
+                  <br>
+                  Absolutely love it! Just the best product and an incredible team. 360 photobooth is literally a show stopper!”                
                 </p>
                 <div class="profile mt-auto">
-                  <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                  <h3>Sara Wilsson</h3>
-                  <h4>Designer</h4>
+                  <img src="assets/img/testimonials/2.png" class="testimonial-img" alt="">
+                  <h3>Sunitha Prasanna</h3>
+                  <!-- <h4>Designer</h4> -->
                 </div>
               </div>
             </div><!-- End testimonial item -->
@@ -211,12 +366,14 @@
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
                 <p>
-                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                  360 Photo Booth was amazing to work with. We hosted a large charity fundraising event. 
+                  They were so kind and helpful to all of our guests, their videos were sent to us promptly after the event. 
+                  We will definitely hire them again. We highly recommend them for your event!                
                 </p>
                 <div class="profile mt-auto">
-                  <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                  <h3>Jena Karlis</h3>
-                  <h4>Store Owner</h4>
+                  <img src="assets/img/testimonials/3.png" class="testimonial-img" alt="">
+                  <h3>Michelle</h3>
+                  <!-- <h4>Store Owner</h4> -->
                 </div>
               </div>
             </div><!-- End testimonial item -->
@@ -227,12 +384,16 @@
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
                 <p>
-                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                  The 360 Booth team arrived on time to my event with high energy and provided exceptional service.
+                  <br>
+                  Such a fun activity to have at any event and the great price and friendly service is the cherry on top!
+                  <br>
+                  I will find any excuse to book them again!                
                 </p>
                 <div class="profile mt-auto">
                   <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                  <h3>Matt Brandon</h3>
-                  <h4>Freelancer</h4>
+                  <h3>Mahana S</h3>
+                  <!-- <h4>Freelancer</h4> -->
                 </div>
               </div>
             </div><!-- End testimonial item -->
@@ -243,12 +404,14 @@
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
                 <p>
-                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                  I booked the 360 photo booth for my wedding on December 17th and it was the best experience from beginning to end! 
+                  Binu and Sonia were absolutely amazing!! They were so friendly and patient with our guests. 
+                  I highly recommend this company for anyone looking for a great experience! Thank you sooo much for everything!!                
                 </p>
                 <div class="profile mt-auto">
-                  <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                  <h3>John Larson</h3>
-                  <h4>Entrepreneur</h4>
+                  <img src="assets/img/testimonials/5.png" class="testimonial-img" alt="">
+                  <h3>Nadia Yousif</h3>
+                  <!-- <h4>Entrepreneur</h4> -->
                 </div>
               </div>
             </div><!-- End testimonial item -->
@@ -261,96 +424,57 @@
     </section><!-- End Testimonials Section -->
 
         <!-- ======= Companies Section ======= -->
-        <section id="testimonials" class="testimonials">
+        <section id="companies" class="companies">
       <div class="container">
 
         <div class="section-header">
-          <h2>Companies we worked with</h2>
-          <p>What they are saying</p>
+          <h2>Companies</h2>
+          <p>We worked with </p>
         </div>
 
-        <div class="slides-3 swiper">
+        <div class="slides-4 swiper">
           <div class="swiper-wrapper">
 
             <div class="swiper-slide">
-              <div class="testimonial-item">
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                </p>
-                <div class="profile mt-auto">
-                  <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                  <h3>Saul Goodman</h3>
-                  <h4>Ceo &amp; Founder</h4>
-                </div>
+              <div class="company-item">
+                  <img src="assets/img/logos/1.png" alt="">
               </div>
-            </div><!-- End testimonial item -->
-
+            </div><!-- End company item -->
             <div class="swiper-slide">
-              <div class="testimonial-item">
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                </p>
-                <div class="profile mt-auto">
-                  <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                  <h3>Sara Wilsson</h3>
-                  <h4>Designer</h4>
-                </div>
+              <div class="company-item">
+                  <img src="assets/img/logos/2.png" alt="">
               </div>
-            </div><!-- End testimonial item -->
-
+            </div><!-- End company item -->
             <div class="swiper-slide">
-              <div class="testimonial-item">
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                </p>
-                <div class="profile mt-auto">
-                  <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                  <h3>Jena Karlis</h3>
-                  <h4>Store Owner</h4>
-                </div>
+              <div class="company-item">
+                  <img src="assets/img/logos/3.jpeg" alt="">
               </div>
-            </div><!-- End testimonial item -->
-
+            </div><!-- End company item -->
             <div class="swiper-slide">
-              <div class="testimonial-item">
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-                </p>
-                <div class="profile mt-auto">
-                  <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                  <h3>Matt Brandon</h3>
-                  <h4>Freelancer</h4>
-                </div>
+              <div class="company-item">
+                  <img src="assets/img/logos/4.png" alt="">
               </div>
-            </div><!-- End testimonial item -->
-
+            </div><!-- End company item -->
             <div class="swiper-slide">
-              <div class="testimonial-item">
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-                </p>
-                <div class="profile mt-auto">
-                  <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                  <h3>John Larson</h3>
-                  <h4>Entrepreneur</h4>
-                </div>
+              <div class="company-item">
+                  <img src="assets/img/logos/5.png" alt="">
               </div>
-            </div><!-- End testimonial item -->
+            </div><!-- End company item -->
+            <div class="swiper-slide">
+              <div class="company-item">
+                  <img src="assets/img/logos/6.png" alt="">
+              </div>
+            </div><!-- End company item -->
+            <div class="swiper-slide">
+              <div class="company-item">
+                  <img src="assets/img/logos/7.png" alt="">
+              </div>
+            </div><!-- End company item -->
+            <div class="swiper-slide">
+              <div class="company-item">
+                  <img src="assets/img/logos/8.png" alt="">
+              </div>
+            </div><!-- End company item -->
 
           </div>
           <div class="swiper-pagination"></div>
@@ -358,6 +482,8 @@
 
       </div>
     </section><!-- End Companies Section -->
+
+
 
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
@@ -382,12 +508,15 @@
     <div class="line"></div>
   </div>
 
+
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
+
+
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
