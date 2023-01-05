@@ -1,0 +1,237 @@
+
+  !-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- Slick Slider CSS -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  
+      <!-- jQuery first, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <!-- Slick Slider JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+
+  <style>
+    /* Slider */
+    .slick-slide {
+      margin: 0px 20px;
+    }
+    
+    .logo-carousel {
+      overflow: inherit;
+      border-top: 1px solid #353535;
+      border-bottom: 1px solid #353535;
+    }
+    
+    .slick-slide img {
+      width: 100%;
+    }
+    
+    .slick-track::before,
+    .slick-track::after {
+      display: table;
+      content: '';
+    }
+    
+    .slick-track::after {
+      clear: both;
+    }
+    
+    .slick-track {
+      padding: 1rem 0;
+    }
+    
+    .slick-loading .slick-track {
+      visibility: hidden;
+    }
+    
+    .slick-slide.slick-loading img {
+      display: none;
+    }
+    
+    .slick-slide.dragging img {
+      pointer-events: none;
+    }
+    
+    .slick-loading .slick-slide {
+      visibility: hidden;
+    }
+    
+    .slick-arrow {
+      position: absolute;
+      top: 50%;
+      background: url(https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/arrow.svg?sanitize=true) center no-repeat;
+      color: #fff;
+      filter: invert(77%) sepia(32%) saturate(1%) hue-rotate(344deg) brightness(105%) contrast(103%);
+      border: none;
+      width: 2rem;
+      height: 1.5rem;
+      text-indent: -10000px;
+      margin-top: -16px;
+      z-index: 99;
+    }
+    
+    .slick-arrow.slick-next {
+      right: -40px;
+      transform: rotate(180deg);
+    }
+    
+    .slick-arrow.slick-prev {
+      left: -40px;
+    }
+    
+    /* Media Queries */
+    
+    @media (max-width: 768px) {
+      .slick-arrow {
+        width: 1rem;
+        height: 1rem;
+      }
+    }
+    
+    body {
+        background-color: #010101;
+      }
+      
+    .row {
+      overflow: hidden;
+    }  
+    
+    /* JsFiddle Example only/don't use */
+    .logo-carousel {
+      margin-top: 32px;
+    }
+          </style>
+        <div class="row">
+      <div class="container">
+        <section class="logo-carousel slider" data-arrows="true">
+          <div class="slide"><img src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image1.png"></div>
+          <div class="slide"><img src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image2.png"></div>
+          <div class="slide"><img src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image3.png"></div>
+          <div class="slide"><img src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image4.png"></div>
+          <div class="slide"><img src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image5.png"></div>
+          <div class="slide"><img src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image6.png"></div>
+          <div class="slide"><img src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image7.png"></div>
+          <div class="slide"><img src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image8.png"></div>
+        </section>
+      </div>
+    </div>
+    
+    <script>
+    $(document).ready(function() {
+      $('.logo-carousel').slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        arrows: true,
+        dots: false,
+        pauseOnHover: false,
+        responsive: [{
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 4
+          }
+        }, {
+          breakpoint: 520,
+          settings: {
+            slidesToShow: 2
+          }
+        }]
+      });
+    });
+      </script>
+
+
+
+<!-- Second example -->
+
+
+<!-- <div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="lc-block">
+				<div id="carouselLogos" class="carousel slide pt-5 pb-4" data-bs-ride="carousel">
+
+					<div class="carousel-inner px-5">
+						<div class="carousel-item">
+							<div class="row">
+								<div class="col-6 col-lg-2 align-self-center">
+									<img class="d-block w-100 px-3 mb-3" src="https://cdn.livecanvas.com/media/logos/11.png" alt="">
+								</div>
+								<div class="col-6 col-lg-2  align-self-center">
+									<img class="d-block w-100 px-3  mb-3" src="https://cdn.livecanvas.com/media/logos/2.png" alt="">
+								</div>
+								<div class="col-6 col-lg-2  align-self-center">
+									<img class="d-block w-100 px-3  mb-3" src="https://cdn.livecanvas.com/media/logos/3.png" alt="">
+								</div>
+								<div class="col-6 col-lg-2  align-self-center">
+									<img class="d-block w-100 px-3  mb-3" src="https://cdn.livecanvas.com/media/logos/12.png" alt="">
+								</div>
+								<div class="col-6 col-lg-2  align-self-center">
+									<img class="d-block w-100 px-3  mb-3" src="https://cdn.livecanvas.com/media/logos/5.png" alt="">
+								</div>
+								<div class="col-6 col-lg-2  align-self-center">
+									<img class="d-block w-100 px-3  mb-3" src="https://cdn.livecanvas.com/media/logos/6.png" alt="">
+								</div>
+							</div>
+
+						</div>
+						<div class="carousel-item active">
+							<div class="row">
+								<div class="col-6 col-lg-2 align-self-center">
+									<img class="d-block w-100 px-3 mb-3" src="https://cdn.livecanvas.com/media/logos/11.png" alt="">
+								</div>
+								<div class="col-6 col-lg-2  align-self-center">
+									<img class="d-block w-100 px-3  mb-3" src="https://cdn.livecanvas.com/media/logos/2.png" alt="">
+								</div>
+								<div class="col-6 col-lg-2  align-self-center">
+									<img class="d-block w-100 px-3  mb-3" src="https://cdn.livecanvas.com/media/logos/3.png" alt="">
+								</div>
+								<div class="col-6 col-lg-2  align-self-center">
+									<img class="d-block w-100 px-3  mb-3" src="https://cdn.livecanvas.com/media/logos/12.png" alt="">
+								</div>
+								<div class="col-6 col-lg-2  align-self-center">
+									<img class="d-block w-100 px-3  mb-3" src="https://cdn.livecanvas.com/media/logos/5.png" alt="">
+								</div>
+								<div class="col-6 col-lg-2  align-self-center">
+									<img class="d-block w-100 px-3  mb-3" src="https://cdn.livecanvas.com/media/logos/6.png" alt="">
+								</div>
+							</div>
+
+						</div>
+
+					</div> -->
+
+					
+	<!-- <ol class="carousel-indicators position-relative mt-3">
+		<li data-bs-target="#carouselLogos" data-bs-slide-to="0" class="active bg-dark carousel-control-prev-icon"></li>
+		<li data-bs-target="#carouselLogos" data-bs-slide-to="1" class="bg-dark"></li>
+	</ol>
+	 -->
+<!-- 
+					<div class="w-100 px-3 text-center mt-4">
+						<a class="carousel-control-prev position-relative d-inline me-4" href="#carouselLogos" data-bs-slide="prev">
+							<svg width="2em" height="2em" viewBox="0 0 16 16" class="text-dark" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"></path>
+							</svg>
+							<span class="visually-hidden">Previous</span>
+						</a>
+						<a class="carousel-control-next position-relative d-inline" href="#carouselLogos" data-bs-slide="next">
+							<svg width="2em" height="2em" viewBox="0 0 16 16" class="text-dark" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>
+							</svg>
+							<span class="visually-hidden">Next</span>
+						</a>
+
+
+
+
+
+					</div>
+
+
+				</div> -->
+			<!-- </div>/lc-block -->
+		<!-- </div>/col -->
+	<!-- </div>
+</div> -->
