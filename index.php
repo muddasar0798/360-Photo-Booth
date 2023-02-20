@@ -54,10 +54,11 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-6 text-center">
-          <h2>Let us make the <span>World</span> revolve around you!
+          <!-- <h2>Let us make the <span>World</span> revolve around you! -->
+          <h2>The Next <span>Luxurious</span> Photo Booth Rental Company in Toronto
             <!-- I'm Name</span> a Professional Photographer from Toronto City -->
           </h2>
-          <p>Toronto | Montreal | Calgary | Edmonton </p>
+          <p>Toronto | Montreal | Calgary | Edmonton | Othawa</p>
           <button type="button" class="btn-get-started" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
             Get Quote
           </button>
@@ -150,9 +151,14 @@
     <section id="gallery" class="gallery">
       <div class="container">
         <!-- <div class="video_div"> -->
-          <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+          <div id="carouselExampleFade" [interval]="0" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active video_div">
+              <video autoplay loop muted>
+                    <source src="assets/vid/15.mp4" type="video/mp4">
+                  </video>
+              </div>
+              <div class="carousel-item video_div">
               <video autoplay loop muted>
                     <source src="assets/vid/1.mp4" type="video/mp4">
                   </video>
@@ -287,8 +293,9 @@
       <div class="container">
 
         <div class="section-header">
-          <h2>Testimonials</h2>
-          <p>Google Reviews</p>
+          <h2>Google Reviews</h2>
+          <p>EXCELLENT - Based on 150 reviews</p>
+
           <!-- <p>What they are saying</p> -->
         </div>
 
@@ -401,7 +408,7 @@
 
         <div class="section-header">
           <h2>Companies</h2>
-          <p>We worked with </p>
+          <p>We have worked with </p>
         </div>
 
         <div class="slides-4 swiper">
@@ -445,6 +452,26 @@
             <div class="swiper-slide">
               <div class="company-item">
                   <img src="assets/img/logos/8.png" alt="">
+              </div>
+            </div><!-- End company item -->
+            <div class="swiper-slide">
+              <div class="company-item">
+                  <img src="assets/img/logos/9.jpeg" alt="">
+              </div>
+            </div><!-- End company item -->
+            <div class="swiper-slide">
+              <div class="company-item">
+                  <img src="assets/img/logos/10.jpeg" alt="">
+              </div>
+            </div><!-- End company item -->
+            <div class="swiper-slide">
+              <div class="company-item">
+                  <img src="assets/img/logos/11.jpeg" alt="">
+              </div>
+            </div><!-- End company item -->
+            <div class="swiper-slide">
+              <div class="company-item">
+                  <img src="assets/img/logos/12.jpeg" alt="">
               </div>
             </div><!-- End company item -->
 

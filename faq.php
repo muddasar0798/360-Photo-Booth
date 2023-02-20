@@ -66,7 +66,7 @@
 
     <section class="sample-page">
       <div class="container" data-aos="fade-up">
-        <input type="checkbox" id="toggler" />
+        <input type="checkbox" class="all_toggler" id="toggler" />
         <label for="toggler">Who is 360 Photo Booth? </label>
         <div>360 Photo Booth is a group of passionate individuals that love to laugh and strive to make a party an event
           to remember. Initially, we began as a family run business.
@@ -76,31 +76,122 @@
       </div>
 
       <div class="container">
-        <input type="checkbox" id="toggler1" />
+        <input type="checkbox" class="all_toggler" id="toggler1" />
         <label for="toggler1">How many backdrops do you have? </label>
         <div>Over 40 Beautiful PREMIUM backdrops. </div>
       </div>
 
       <div class="container">
-        <input type="checkbox" id="toggler2" />
+        <input type="checkbox" class="all_toggler" id="toggler2" />
         <label for="toggler2">Does the booth rental come with props? </label>
         <div>Yes, lots and lots of great props! They're hand made and local! We've got tons of theme based props, silly
           props, and of course the staple, lips and moustaches.</div>
       </div>
 
       <div class="container">
-        <input type="checkbox" id="toggler3" />
+        <input type="checkbox" class="all_toggler" id="toggler3" />
         <label for="toggler3">What is a GIF? </label>
         <div>A GIF is basically an image file format that is animated by combining several images into a single file to
           create a constantly moving video. To see an example of this, visit our Services page.</div>
       </div>
 
       <div class="container">
-        <input type="checkbox" id="toggler4" />
+        <input type="checkbox" class="all_toggler" id="toggler4" />
         <label for="toggler4">What is a Boomerang GIF? </label>
         <div>A Boomerang is a GIF that plays backwards and forwards. Like a GIF, it is an image file format that is
           animated by combining several images into a single file to create a constantly moving video. To see an example
           of this, visit our Services page.</div>
+      </div>
+      
+      <div class="container">
+        <input type="checkbox" class="all_toggler" id="toggler5" />
+        <label for="toggler5">What do you need for setup? </label>
+        <div>
+          <p>Access to an outlet to plug in.</p>
+          <p>A 6 ft. x 6 ft space at minimum but we recommend an 8 ft. x 8 ft. space. </p>
+          <p>We normally arrive at your venue 
+            <em>
+              <strong>1 to 1.5 hours before the start time</strong>
+            </em> to ensure it`s setup on time but we can also setup extra early in the daytime if requested.
+          </p>
+        </div>
+      </div>
+
+      <div class="container">
+        <input type="checkbox" class="all_toggler" id="toggler6" />
+        <label for="toggler6">How many photos / videos can we take? </label>
+        <div>We encourage you to take as many photos as you can and want! It`s totally unlimited up until the booking time has ended.</div>
+      </div>
+
+      <div class="container">
+        <input type="checkbox" class="all_toggler" id="toggler7" />
+        <label for="toggler7">I just did the quote...now what? </label>
+        <div>
+          <p>Check your email inbox! <br>
+          We sent the pricing and package details to your email. <br>
+          If you didn`t receive the email, check your junk folder! <br></p>
+          <p>
+          Weekends are in very high demand. <br>
+          If the date is still available, it will be a $100 deposit to reserve. <br>
+          Our team will follow up with you to answer any questions.</p>
+        </div>
+      </div>
+
+      <div class="container">
+        <input type="checkbox" class="all_toggler" id="toggler8" />
+        <label for="toggler8">Will there be staff on-site? </label>
+        <div>We include staffing in our packages for your event convenience and flow. 
+          Our staff deliver and setup the booth and can stay with it if you like to ensure your photo experience 
+          is flawless and you have a great experience. You can also choose to have the booth without staff to save costs on 
+          small intimate events or multi-day tradeshow & festivals.</div>
+      </div>
+
+      <!-- <div class="container">
+        <input type="checkbox" class="all_toggler" id="toggler9" />
+        <label for="toggler9">How do I book? </label>
+        <div>Book Here: <a href="book.php">
+            book.php </a>
+      </div>
+      </div> -->
+
+      <div class="container">
+        <input type="checkbox" class="all_toggler" id="toggler10" />
+        <label for="toggler10">What's included with your package? </label>
+        <div>Photo Booth Rental Packages <em> include </em> <br>
+            1.  Early delivery + setup with staffing. <br>
+            2. Touch screen with beauty filters, tap to start. <br>
+            3. DSLR camera + professional lighting. <br>
+            4. Unlimited photos for the number of hours booked. <br>
+            5. Custom photo layout to match your event. <br>
+            6. Online gallery to download + share photos. <br>
+            7. Backdrop with color of your choice. <br>
+            8. Attendant to assist your guests with the booth.
+        </div>
+      </div>
+
+
+      <div class="container">
+        <input type="checkbox" class="all_toggler" id="toggler11" />
+        <label for="toggler11">What type of backdrops do you have?  </label>
+        <div>
+        <p>
+        We have a wide selection featuring: <br>
+        Simple all-white or all-black backdrops <br>
+        Sparkly sequin backdrops (Gold, Silver, Red, Black, White, Pink).<br></p>
+        <p>We can also make custom designed & printed 8ft. x 8ft. backdrops in-house with a 24 hour turn around time.</p>
+        <p>We also have immersive Green Screen`s that allow you to have a more immersive digital background 
+          experience like Hollywood movie scenes.</p>
+        <p>We include custom overlays ON-TOP of the photos/videos such as having cutouts of people/things or logos appear 
+          on-top anywhere in the digital or printed photo.</p>
+        </div>
+      </div>
+
+      <div class="container">
+        <input type="checkbox" class="all_toggler" id="toggler12" />
+        <label for="toggler12">Are there any travel / delivery fees? </label>
+        <div>We include free delivery and early setup before the start time within Toronto / GTA. 
+          If event location is further than 50km from Vaughan, there may be an additional small travel fee added.
+        </div>
       </div>
 
     </section>

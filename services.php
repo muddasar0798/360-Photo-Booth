@@ -52,12 +52,12 @@
         <div class="row d-flex justify-content-center">
           <div class="col-lg-6 text-center">
             <h2>Services</h2>
-            <p>Our 360 booth is here to enchant your guests! With a camera mounted to a rotating arm 
+            <!-- <p>Our 360 booth is here to enchant your guests! With a camera mounted to a rotating arm 
               and guests standing on our LED platform, create 360-degree slow-motion videos that will 
               take your breath away. The 360 Booth allows guests to pose, dance, and get creative while 
               being captured from a rotating 360-degree angle, creating a high-resolution video they can 
               share instantly on Instagram or Tik Tok.
-            </p>
+            </p> -->
 
             <a class="cta-btn" href="book.php">Enquire Now!</a>
 
@@ -68,7 +68,7 @@
     <style>
     .video_div {
       position: relative;
-      padding-top: 40%;
+      /* padding-top: 40%; -- For mobile */
     }
 
     video {
@@ -88,24 +88,32 @@
       <div class="container">
 
         <div class="row gy-4 justify-content-center">
-          <div class="col-lg-4">
-            <img src="assets/img/services/1.jpg" class="img-fluid" alt="">
-
+          <div class="col-lg-4 video_div">
+            <!-- <img src="assets/img/services/1.jpg" class="img-fluid" alt=""> -->
+            <video autoplay loop muted>
+                    <source src="assets/img/services/360.mp4" type="video/mp4">
+                  </video>
           </div>
           <div class="col-lg-5 content">
-            <h2>Mirror Booth</h2>
-            <p class="fst-italic py-3">
+            <h2>Encompass 360 Photo Booth</h2>
+            <!-- <p class="fst-italic py-3">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
               magna aliqua.
-            </p>
+            </p> -->
             <p class="py-3">
-              Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.
-              Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium dolores.
-            </p>
-            <p class="m-0">
-              Recusandae est praesentium consequatur eos voluptatem. Vitae dolores aliquam itaque odio nihil. Neque ut neque ut quae voluptas. Maxime corporis aut ut ipsum consequatur. Repudiandae sunt sequi minus qui et. Doloribus molestiae officiis.
-              Soluta eligendi fugiat omnis enim. Numquam alias sint possimus eveniet ad. Ratione in earum eum magni totam.
-            </p>
+            We are here to enchant your guests with our 360 Booth! Create slow-motion 360-degree videos with a camera mounted
+             on a rotating arm and guests standing on our LED platform. A rotating 360-degree angle captures guests posing, dancing,
+              and getting creative, creating an instant high-resolution video that can be shared on Instagram or Tik Tok. Our clients 
+              also receive a Digital Gallery by the end of the event. There are many add-ons you can choose from, such as custom
+               designing your video, adding <b>special effects</b>, and adding <b>Hollywood black and white filters.</b></p>
+            <!-- <p class="m-0"> -->
+            <!-- <a class="cta-btn" href="book.php">Book Now!</a> -->
+            <a href="book.php">
+              <button type="button" class="btn-get-started">
+            Book now
+          </button>
+          </a>
+          <!-- </p> -->
           </div>
         </div>
         <hr>
@@ -117,32 +125,33 @@
       <div class="container">
 
         <div class="row gy-4 justify-content-center">
-          <div class="col-lg-4 video_div">
-            <!-- <img src="assets/img/profile-img.jpg" class="img-fluid" alt=""> -->
-            <video autoplay loop muted>
-                    <source src="assets/vid/7.mp4" type="video/mp4">
-                  </video>
+          <div class="col-lg-4">
+            <img src="assets/img/services/Roaming.png" class="img-fluid" alt="">
+
           </div>
           <div class="col-lg-5 content">
-            <h2>360 Photo Booth</h2>
-            <p class="fst-italic py-3">
+            <h2>Encompass Roaming Photographer</h2>
+            <!-- <p class="fst-italic py-3">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
               magna aliqua.
-            </p>
+            </p> -->
             <p class="py-3">
-              Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.
-              Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium dolores.
-            </p>
-            <p class="m-0">
-              Recusandae est praesentium consequatur eos voluptatem. Vitae dolores aliquam itaque odio nihil. Neque ut neque ut quae voluptas. Maxime corporis aut ut ipsum consequatur. Repudiandae sunt sequi minus qui et. Doloribus molestiae officiis.
-              Soluta eligendi fugiat omnis enim. Numquam alias sint possimus eveniet ad. Ratione in earum eum magni totam.
-            </p>
+            Are you looking for the most stunning candid shots, group photos from different angles, 
+            and different angles of your event to be captured? Are you interested in making those images available 
+            for guests to share on the spot or after the party? Our roaming event photography service will create lasting 
+            memories for your event!</p>
+            <a href="book.php">
+              <button type="button" class="btn-get-started">
+            Book now
+          </button>
+          </a>
           </div>
         </div>
         <hr>
 
       </div>
     </section><!-- End 360 Photo Booth Section -->
+
     <!-- ======= Regular Photo Booth Section ======= -->
     <section id="mirror2" class="mt-4 about">
       <div class="container">
@@ -152,19 +161,58 @@
             <img src="assets/img/services/3.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-lg-5 content">
-            <h2>Regular Photo Booth</h2>
-            <p class="fst-italic py-3">
+            <h2>Encompass Magic Mirror Booth</h2>
+            <!-- <p class="fst-italic py-3">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
               magna aliqua.
-            </p>
+            </p> -->
             <p class="py-3">
-              Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.
-              Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium dolores.
-            </p>
-            <p class="m-0">
-              Recusandae est praesentium consequatur eos voluptatem. Vitae dolores aliquam itaque odio nihil. Neque ut neque ut quae voluptas. Maxime corporis aut ut ipsum consequatur. Repudiandae sunt sequi minus qui et. Doloribus molestiae officiis.
-              Soluta eligendi fugiat omnis enim. Numquam alias sint possimus eveniet ad. Ratione in earum eum magni totam.
-            </p>
+            This Magic Mirror Photo Booth features a hidden professional DLSR camera, special animations, 
+            and graphic effects. You'll be able to make your guests feel like royalty at your event with this. 
+            You can make your own photo strip or postcard by customizing the theme or logo. 
+            Share your photo or GIF on Instagram, Tik Tok Email, or Twitter. All our staff members are trained to 
+            install everything for you and maintain the highest level of professionalism. Additionally, we provide our
+             clients with a Digital Gallery of the Event. Take your beauty to another level with Hollywood B&W beauty filters. 
+             <b>Video, boomerangs, GIFs, greenscreen, Email Sharing, and more are all possible.</b></p>
+             <a href="book.php">
+              <button type="button" class="btn-get-started">
+            Book now
+          </button>
+          </a>
+          </div>
+        </div>
+        <hr>
+
+      </div>
+    </section><!--End Regular Photo Booth Section -->
+
+    <!-- ======= Regular Photo Booth Section ======= -->
+    <section id="mirror3" class="mt-4 about">
+      <div class="container">
+
+        <div class="row gy-4 justify-content-center">
+          <div class="col-lg-4">
+            <img src="assets/img/services/Instapod.png" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-5 content">
+            <h2>Encompass Instapod Booth</h2>
+            <!-- <p class="fst-italic py-3">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua.
+            </p> -->
+            <p class="py-3">
+            Encompass Instapod Photo Booths can enhance any event, no matter how big or small. 
+            It is one of the most popular open-air photo booth rentals we offer. 
+            With this carefully crafted device, studio-quality photos can be printed instantly. 
+            With this sophisticated and timeless design, you can enjoy all the modern bells and whistles. 
+            You'll be able to provide your guests with a memorable experience when they interact with this. 
+            The following add-ons can always take your photos to another level: Hollywood B&W beauty filters. 
+            <b>Boomerangs, GIFs, Videos, Greenscreen, Email Sharing, and more are possible.</b></p>
+            <a href="book.php">
+              <button type="button" class="btn-get-started">
+            Book now
+          </button>
+          </a>
           </div>
         </div>
 

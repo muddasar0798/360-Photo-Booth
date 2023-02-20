@@ -19,7 +19,8 @@
 /* Colors */
 :root {
   --color-default: #fafafa;
-  --color-primary: #27a776;
+  /* --color-primary: #27a776; */
+  --color-primary: #0ff1e4;
   --color-secondary: #161718;
 }
 
@@ -1328,7 +1329,7 @@ h6 {
   font-size: 18px;
 }
 
-.hero .btn-get-started, #modal .submit {
+.hero .btn-get-started, #modal .submit, .about .btn-get-started {
   font-family: var(--font-primary);
   font-weight: 400;
   font-size: 14px;
@@ -1342,7 +1343,7 @@ h6 {
   background: var(--color-primary);
 }
 
-.hero .btn-get-started:hover, #modal .submit:hover {
+.hero .btn-get-started:hover, #modal .submit:hover,.about .btn-get-started:hover {
   background: #0ff1e4;
 }
 
@@ -1379,15 +1380,15 @@ h6 {
 }
 
 /* FAQ */
-#toggler, #toggler1, #toggler2, #toggler3, #toggler4 {
+.all_toggler {
   display: none;
 }
 
-#toggler+label, #toggler1+label, #toggler2+label, #toggler3+label, #toggler4+label {
+.all_toggler+label {
   cursor: pointer;
 }
 
-#toggler+label:before, #toggler1+label:before, #toggler2+label:before, #toggler3+label:before,#toggler4+label:before  {
+.all_toggler+label:before {
   font-family: 'Glyphicons Halflings';
   content: "\e114";
   display: inline-block;
@@ -1396,15 +1397,46 @@ h6 {
   padding: 1em;
 }
 
-#toggler~div, #toggler1~div, #toggler2~div, #toggler3~div, #toggler4~div {
+.all_toggler~div {
   display: none;
   padding-left: 1em;
 }
 
-#toggler:checked~div, #toggler1:checked~div, #toggler2:checked~div, #toggler3:checked~div, #toggler4:checked~div {
+.all_toggler:checked~div {
   display: block;
 }
 
-#toggler:checked+label:before, #toggler1:checked+label:before, #toggler2:checked+label:before, #toggler3:checked+label:before, #toggler4:checked+label:before {
+.all_toggler:checked+label:before {
   transform: rotate(0);
 }
+
+
+/* #toggler, #toggler1, #toggler2, #toggler3, #toggler4, #toggler5, #toggler6 {
+  display: none;
+}
+
+#toggler+label, #toggler1+label, #toggler2+label, #toggler3+label, #toggler4+label, #toggler5+label, #toggler6+label {
+  cursor: pointer;
+}
+
+#toggler+label:before, #toggler1+label:before, #toggler2+label:before, #toggler3+label:before,#toggler4+label:before,#toggler5+label:before,#toggler6+label:before  {
+  font-family: 'Glyphicons Halflings';
+  content: "\e114";
+  display: inline-block;
+  transform: rotate(-90deg);
+  transition: transform .3s;
+  padding: 1em;
+}
+
+#toggler~div, #toggler1~div, #toggler2~div, #toggler3~div, #toggler4~div, #toggler5~div, #toggler6~div {
+  display: none;
+  padding-left: 1em;
+}
+
+#toggler:checked~div, #toggler1:checked~div, #toggler2:checked~div, #toggler3:checked~div, #toggler4:checked~div, #toggler5:checked~div, #toggler5:checked~div {
+  display: block;
+}
+
+#toggler:checked+label:before, #toggler1:checked+label:before, #toggler2:checked+label:before, #toggler3:checked+label:before, #toggler4:checked+label:before, #toggler5:checked+label:before, #toggler6:checked+label:before {
+  transform: rotate(0);
+} */
